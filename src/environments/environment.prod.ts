@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  serverUrl: "neo4j-mongo-api.herokuapp.com/api/v1"
 };
