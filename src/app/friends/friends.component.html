@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-friends-edit></app-friends-edit>
+    <hr> 
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let friend of friends; let i = index"
+        (click)="onEditItem(i)"
+      >
+        <!-- {{ friend._fields[0].properties.firstName }} {{ friend._fields[0].properties.lastName }} ({{ friend._fields[0].properties.age }}) -->
+        {{ friend.firstName }} {{ friend.lastName }} ({{ friend.age }})
+      </a>
+    </ul>
+  </div>
+</div>
+

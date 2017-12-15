@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Onderdeel: {{ exercise?.bodyPart }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Naam oefening: {{ exercise?.name }}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h4>Omschrijving: {{ exercise?.description }}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-5">
+    <h4>Aantal sets: {{ exercise?.sets }}</h4>
+  </div>
+  <div class="col-sm-5">
+    <h4>Aantal reps: {{ exercise?.reps }}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        beheer oefening <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddExerciseToPersonalScheme()" style="cursor: pointer;">Voeg toe aan persoonlijk schema</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditExercise()">Edit oefening</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteExercise()">Delete oefening</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

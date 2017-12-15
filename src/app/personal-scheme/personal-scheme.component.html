@@ -1,0 +1,20 @@
+<app-delete-scheme></app-delete-scheme>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-personal-item-scheme
+      *ngFor="let personalSchemeEl of personalScheme; let i = index"
+      [personalScheme]="personalSchemeEl"
+      [index]="i"></app-personal-item-scheme>
+  </div>
+</div> 
+<hr>
+<ul class="list-group">
+  <a
+    class="list-group-item"
+    *ngFor="let friend of friends; let i = index"
+  >
+    <!-- {{ friend._fields[0].properties.firstName }} {{ friend._fields[0].properties.lastName }} ({{ friend._fields[0].properties.age }}) -->
+    {{ friend.firstName }} {{ friend.lastName }} ({{ friend.age }})
+  </a> 
+</ul>
